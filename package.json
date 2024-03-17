@@ -1,38 +1,39 @@
 {
-  "name": "control-page-with-controller",
-  "description": "Control page with controller?",
-  "type": "module",
-  "main": "",
-  "module": "",
-  "exports": {
-    ".": {}
-  },
-  "types": "",
-  "scripts": {
-    "build": "wireit"
-  },
-  "files": [],
-  "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^11.1.6",
-    "@types/chrome": "^0.0.263",
-    "rollup": "^4.13.0",
-    "typescript": "^5.4.2",
-    "wireit": "^0.14.4"
-  },
-  "wireit": {
-    "build": {
-      "command": "rollup -c",
-      "clean": "if-file-deleted",
-      "files": [
-        "./rollup.config.js",
-        "./tsconfig.json",
-        "./src"
-      ],
-      "output": [
-        "./lib"
-      ]
-    }
-  }
+	"name": "control-page-with-controller",
+	"description": "Control page with controller?",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "",
+	"module": "",
+	"exports": {
+		".": {}
+	},
+	"types": "",
+	"scripts": {
+		"build": "wireit"
+	},
+	"files": [],
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@types/chrome": "^0.0.263",
+		"rollup": "^4.13.0",
+		"typescript": "^5.4.2",
+		"wireit": "^0.14.4"
+	},
+	"wireit": {
+		"build": {
+			"command": "rollup -c",
+			"clean": "if-file-deleted",
+			"files": [
+				"./rollup.config.js",
+				"./tsconfig.json",
+				"./src"
+			],
+			"output": [
+				"./lib"
+			]
+		}
+	}
 }
