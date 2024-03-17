@@ -1,0 +1,16 @@
+{
+	"manifest_version": 3,
+	"name": "control-page-with-controller",
+	"description": "Control page with controller?",
+	"version": "1.0",
+	"background": {
+		"service_worker": "./lib/background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"exclude_matches": ["https://*.vdegenne.com/*", "https://localhost/*"],
+			"js": ["./lib/content.js"]
+		}
+	]
+}
