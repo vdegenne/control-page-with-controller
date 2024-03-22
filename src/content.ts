@@ -1,7 +1,11 @@
 import {XBoxButton, gameControl} from 'esm-gamecontroller.js';
 
-gameControl.on('connect', (gamepad) => {
+gameControl.on('connect', async (gamepad) => {
 	gamepad.axeThreshold = [0.05];
+
+	await new Promise((r) => setTimeout(r, 100));
+
+	console.log('the fuck is that');
 
 	/** scroll */
 	gamepad.on(XBoxButton.RIGHT_STICK_UP, () => {
@@ -12,7 +16,7 @@ gameControl.on('connect', (gamepad) => {
 	});
 
 	/** close tab */
-	gamepad.before(XBoxButton.Y, () => {
+	gamepad.after(XBoxButton.Y, () => {
 		chrome.runtime.sendMessage({action: 'closeCurrentTab'});
 	});
 });
