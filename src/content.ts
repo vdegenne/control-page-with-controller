@@ -1,11 +1,7 @@
 import {XBoxButton, gameControl} from 'esm-gamecontroller.js';
 
-gameControl.on('connect', async (gamepad) => {
+gameControl.on('connect', (gamepad) => {
 	gamepad.axeThreshold = [0.05];
-
-	await new Promise((r) => setTimeout(r, 100));
-
-	console.log('the fuck is that');
 
 	/** scroll */
 	gamepad.on(XBoxButton.RIGHT_STICK_UP, () => {
